@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb58385-5645-46be-8e0e-e5cf989fc868" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../ss03_pseudo_flowchart/excercise/mô tả thuật toán cấu trúc điều kiện.drawio.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss03_pseudo_flowchart/excercise/tìm số lớn nhất trong 3 số.drawio.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss03_pseudo_flowchart/excercise/tìm số lớn nhất trong dãy số.docx" beforeDir="false" />
-    </list>
+    <list default="true" id="ddb58385-5645-46be-8e0e-e5cf989fc868" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +67,7 @@
       <workItem from="1685882327431" duration="6036000" />
       <workItem from="1685888747686" duration="133000" />
       <workItem from="1685934067018" duration="738000" />
+      <workItem from="1685934935977" duration="33000" />
     </task>
     <servers />
   </component>
