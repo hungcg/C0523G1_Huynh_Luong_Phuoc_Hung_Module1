@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tính</title>
+</head>
+<body>
+<table>
+    <h2>Siêu máy tính</h2>
+    <th><input style="height: 50px;width: 130px;" type="number" id="s1" placeholder="nhập số vào đây"></th>
+
+
+    <tr>
+        <td><input style="height: 20px;width: 80px;background-color: indianred;color: white" type="submit" id="cong"
+                   value="Cộng vào" onclick="cong()"></td>
+
+    </tr>
+    <tr>
+        <td><input style="height: 20px;width: 80px;background-color: yellowgreen;color: white" type="submit" id="tru"
+                   value="Trừ ra" onclick="tru()"></td>
+        <td style="color: orange" id="c">
+        </td>
+    </tr>
+    <tr>
+        <td><input style="height: 20px;width: 80px;background-color: darkolivegreen;color: white" type="submit"
+                   id="nhan"
+                   value="Nhân thêm " onclick="nhan()"></td>
+    </tr>
+    <tr>
+        <td><input style="height: 20px;width: 80px;background-color: cornflowerblue;color: white" type="submit"
+                   id="chia" value="Chia bớt" onclick="chia()"></td>
+    </tr>
+
+
+    <th><input style="height: 50px;width: 130px" type="number" id="s2" placeholder="nhập thêm số nữa"></th>
+
+
+    <script>
+        function cong() {
+            let a = parseFloat(document.getElementById("s1").value)
+            let b = parseFloat(document.getElementById("s2").value)
+            let c = (a + b)
+            document.getElementById("c").innerHTML = "<h1>" + c + "</h1>"
+        }
+
+        function tru() {
+            let a = parseFloat(document.getElementById("s1").value)
+            let b = parseFloat(document.getElementById("s2").value)
+            let c = (a - b)
+            document.getElementById("c").innerHTML = "<h1>" + c + "</h1>"
+        }
+
+        function nhan() {
+            let a = parseFloat(document.getElementById("s1").value)
+            let b = parseFloat(document.getElementById("s2").value)
+            let c = (a * b)
+            document.getElementById("c").innerHTML = "<h1>" + c + "</h1>"
+        }
+
+        function chia() {
+            let a = parseFloat(document.getElementById("s1").value)
+            let b = parseFloat(document.getElementById("s2").value)
+            let c = (a / b)
+            document.getElementById("c").innerHTML = "<h1>" + c + "</h1>"
+        }
+    </script>
+
+</table>
+</body>
+</html>

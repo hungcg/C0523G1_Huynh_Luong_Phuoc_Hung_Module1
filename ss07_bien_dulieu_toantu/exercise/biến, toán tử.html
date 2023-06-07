@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến kiểu dữ liệu & toán tử</title>
+</head>
+<body>
+<script> debugger
+
+function diemtb() {
+    let a = parseInt(document.getElementById("ly").value)
+    let b = parseInt(document.getElementById("hoa").value)
+    let c = parseInt(document.getElementById("sinh").value)
+    let d = (a + b + c) / 3
+    alert("Điểm trung bình của bạn là " + d)
+}
+
+</script>
+<table>
+    <h3>Tính điểm trung bình</h3>
+    <tr>
+        <td>Điểm Lý</td>
+        <td><input type="number" id="ly"></td>
+    </tr>
+    <tr>
+        <td>Điểm Hóa</td>
+        <td><input type="number" id="hoa"></td>
+    </tr>
+    <tr>
+        <td>Điểm Sinh</td>
+        <td><input type="number" id="sinh"></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Điểm Trung Bình" onclick="diemtb()"></td>
+    </tr>
+
+</table>
+
+<table>
+    <script>
+        function doicf() {
+            let f = parseFloat(document.getElementById("cf").value) * 1.8 + 32
+            document.getElementById("ketqua").innerHTML = "<h1>" + f + " độ F" + "</h1>"
+        }
+    </script>
+
+    <tr>
+        <h3>Đổi độ C sang độ F</h3>
+    </tr>
+    <tr>
+        <td>Độ C</td>
+        <td></td>
+        <td><input type="number" id="cf" placeholder="Nhập độ C"></td>
+        <td><input type="submit" name="submit1" value="Đổi sang độ F" onclick="doicf()"></td>
+
+        <p id="ketqua"></p>
+</table>
+
+<!--<script>-->
+<!--    let x = +prompt("nhập vào độ C")-->
+<!--    let q = x*5/9 +32-->
+<!--    alert(q)-->
+<!--</script>-->
+
+<table>
+    <script>
+        function doiC() {
+            let cv = parseFloat(document.getElementById("sd").value) * 3.14
+            document.getElementById("ketqua2").innerHTML = "<h1>" + cv  + "</h1>"
+
+        }
+    </script>
+    <h3>Tính chu vi hình tròn</h3>
+    <tr>
+        <td><input type="number" id="sd" placeholder="Nhập vào đường kính"></td>
+        <td><input type="submit" value="Tính chu vi" onclick="doiC()"></td>
+        <p id="ketqua2"></p>
+
+    </tr>
+</table>
+
+<table>
+    <script>
+        function tinhdt() {
+            let r = parseFloat(document.getElementById("ht").value)
+            let sdt= (r*r)*3.14
+            document.getElementById("ketqua3").innerHTML = "<h1>" + sdt  + "</h1>"
+        }
+    </script>
+    <h3>Tính diện tích hình tròn</h3>
+    <tr>
+        <td> <input type="number" id="ht" placeholder="Nhập vào bán kính"> </td>
+        <td><input type="submit" value="Tính diện tích" onclick="tinhdt()"> </td>
+        <p id="ketqua3"></p>
+
+    </tr>
+</table>
+
+
+</body>
+</html>

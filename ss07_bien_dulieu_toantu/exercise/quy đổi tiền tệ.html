@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quy đổi tiền tệ</title>
+</head>
+<body>
+<h1>Exchange Money</h1>
+<table>
+    <th>Amount</th>
+    <th>From</th>
+    <th></th>
+    <th></th>
+    <th>To</th>
+    <tr>
+        <td><input type="number" id="am" value="amount" placeholder="Nhập số tiền"></td>
+        <td><select id="fr">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select></td>
+        <td></td>
+        <td></td>
+        <td><select id="to">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select></td>
+        <td></td>
+        <td></td>
+        <td><input type="submit" value="Exchange" id="ex" onclick="ec()"></td>
+    <tr>
+    <tr id="Result"></tr>
+    </tr>
+
+    </tr>
+    <script>
+        function ec() {
+            let a = document.getElementById("am").value;
+            let b = document.getElementById("fr").value;
+            let c = document.getElementById("to").value;
+
+
+            if (b == "USD" && c == "VND") {
+                Result = (a * 23000) + " Đ";
+            } else if (b == "VND" && c == "USD") {
+                Result = (a / 23000) + " $";
+            } else if (b == "VND") {
+                Result = a + " Đ"
+            } else {
+                Result = a + " $"
+            }
+
+            document.getElementById("Result").innerHTML = "<h1>" + Result + "</h1>"
+        }
+    </script>
+</table>
+
+</body>
+</html>
