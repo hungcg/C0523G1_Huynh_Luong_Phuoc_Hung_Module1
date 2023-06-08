@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực học sinh</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập vào điểm kiểm tra giữa kì");
+    let b = +prompt("nhập vào điểm kiểm tra cuối kì ");
+    let ketQua = [a+(b*2)]/3
+    if (ketQua > 8) {
+        alert("Điểm trung bình của bạn là " + ketQua +
+            " xếp loại giỏi")
+    } else if (ketQua > 6.5) {
+        alert("Điểm trung bình của bạn là " + ketQua +
+            " xếp loại khá")
+    } else {
+        alert("Điểm trung bình của bạn là " + ketQua +
+            " xếp loại trung bình")
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính chỉ số cân nặng</title>
+</head>
+<body>
+<script>
+    let canNang = +prompt("nhập vào cân nặng");
+    let chieuCao = +prompt("nhập vào chiều cao");
+    let tinhBmi = canNang / (chieuCao * chieuCao);
+    if (tinhBmi < 18.5) {
+        alert(" bạn hơi gầy ăn nhiều vào")
+    } else if (tinhBmi < 25) {
+        alert("bạn dáng đẹp")
+    } else if (tinhBmi < 30) {
+        alert("bạn hơi đầy đặn ")
+
+    } else {
+        alert("bạn thừa cân rồi tập thể dục đi")
+    }
+</script>
+
+</body>
+</html>"

@@ -26,9 +26,9 @@
         </select></td>
         <td></td>
         <td></td>
-        <td><input type="submit" value="Exchange" id="ex" onclick="ec()"></td>
+        <td><input type="submit" value="exchange" id="ex" onclick="ec()"></td>
     <tr>
-    <tr id="Result"></tr>
+    <tr id="result"></tr>
     </tr>
 
     </tr>
@@ -40,16 +40,16 @@
 
 
             if (b == "USD" && c == "VND") {
-                Result = (a * 23000) + " Đ";
+                result = (a * 23000) + " Đ";
             } else if (b == "VND" && c == "USD") {
-                Result = (a / 23000) + " $";
+                result = (a / 23000) + " $";
             } else if (b == "VND") {
-                Result = a + " Đ"
+                result = a + " Đ"
             } else {
-                Result = a + " $"
+                result = a + " $"
             }
 
-            document.getElementById("Result").innerHTML = "<h1>" + Result + "</h1>"
+            document.getElementById("result").innerHTML = "<h1>" + result + "</h1>"
         }
     </script>
 </table>
