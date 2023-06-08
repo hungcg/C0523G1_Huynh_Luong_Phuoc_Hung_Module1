@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình chữ nhật</title>
+</head>
+<body>
+<h3>Tính diện tích hình chữ nhật </h3>
+
+<th>Đơn vị chiều dài :m (mét)</th><br><br>
+<th><input  type="number" id="canhA" value="canhlon" placeholder="nhập chiều dài "> </th>
+<th><input type="number" id="canhB" value="canhbe" placeholder="nhập chiều rộng"> </th>
+<th><input type="submit" id="tinhdientich" value="Tính diện tích" onclick="tinhdt()" > </th>
+<p id="ketqua"></p>
+<script>
+    function tinhdt() {
+        let a = parseFloat(document.getElementById("canhA").value);
+        let b = parseFloat(document.getElementById("canhB").value);
+        let ketQua = (a*b)
+        document.getElementById("ketqua").innerHTML = "Diện tích hình chữ nhật là " + ketQua + " m2"
+
+    }
+</script>
+
+</body>
+</html>

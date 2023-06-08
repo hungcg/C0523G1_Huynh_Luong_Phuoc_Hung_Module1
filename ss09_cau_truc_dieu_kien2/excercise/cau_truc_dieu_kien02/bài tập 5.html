@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích tam giác vuông</title>
+</head>
+<body>
+<h3> Tính diện tích tam giác vuông ABC</h3>
+<th>Đơn vị chiều dài :m (mét)</th><br>
+<th><input  type="number" id="canhA" value="canhlon" placeholder="nhập chiều dài cạnh AB "> </th>
+<th><input type="number" id="canhB" value="canhbe" placeholder="nhập chiều dài cạnh AC"> </th>
+<th><input type="submit" id="tinhdientich" value="Tính diện tích" onclick="tinhdt()" > </th>
+<p id="ketqua"></p>
+<script>
+    function tinhdt() {
+        let a = parseFloat(document.getElementById("canhA").value);
+        let b = parseFloat(document.getElementById("canhB").value);
+        let ketQua = 0.5* (a*b)
+        document.getElementById("ketqua").innerHTML = "Diện tích tam giác vuông là " + ketQua + "m2"
+
+    }
+</script>
+
+</body>
+</html>

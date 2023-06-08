@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi m sang feet</title>
+</head>
+<body>
+<th><input type="number" id="met" value="chieudai" placeholder="nhập độ dài (mét)"></th>
+<th><input type="submit" value="Đổi sang feet" onclick="doidodai()"></th>
+<p id="ketqua"></p>
+
+<script>
+    function doidodai() {
+        let a = +parseFloat(document.getElementById("met").value)
+        let ketQua = a * 3.2808
+        document.getElementById("ketqua").innerHTML = ketQua + " Feet"
+    }
+    </script>
+</body>
+    </html>

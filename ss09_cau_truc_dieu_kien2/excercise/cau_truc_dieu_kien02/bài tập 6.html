@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc nhất</title>
+</head>
+<body>
+<h3>Giải phương trình bậc nhất</h3>
+<h4>Phương trình bậc nhất: ax+ b=0</h4>
+<h4>tìm nghiệm x?</h4>
+<th><input type="number" id="canhA" value="canhlon" placeholder="nhập a "></th>
+<th><input type="number" id="canhB" value="canhbe" placeholder="nhập b"></th>
+<th><input type="submit" id="tinhdientich" value="Kết quả" onclick="tinhdt()"></th>
+<p id="ketqua"></p>
+<script>
+    function tinhdt() {
+        let a = parseFloat(document.getElementById("canhA").value);
+        let b = parseFloat(document.getElementById("canhB").value);
+        let c = -b / a
+        if (a == 0 && b == 0) {
+            document.getElementById("ketqua").innerHTML = "Phương trình có vô số nghiệm x "
+        } else if (b != 0 && a == 0) {
+
+            document.getElementById("ketqua").innerHTML = "Phương trình có vô nghiệm"
+        } else {
+            document.getElementById("ketqua").innerHTML = "Phương trình có nghiệm duy nhất x = " + c
+
+
+        }
+    }
+</script>
+</body>
+</html>

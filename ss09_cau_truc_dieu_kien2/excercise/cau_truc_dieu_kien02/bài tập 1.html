@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th><input type="number" id="doC" value="nhietdo"  placeholder="nhập độ C"> </th>
+<th><input type="submit" value="Đổi sang độ F" onclick="doinhietdo()"></th>
+<p id="ketqua"></p>
+
+<script>
+  function doinhietdo() {
+    let a= +parseFloat(document.getElementById("doC").value)
+    let ketQua = a*1.8 +32
+    document.getElementById("ketqua").innerHTML = ketQua+" Độ F"
+
+  }
+</script>
+</body>
+</html>

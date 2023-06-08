@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h4>Phương trình bậc nhất: a2+ bx+c =0</h4>
+<h4>tìm nghiệm x?</h4>
+<th><input type="number" id="canhA" value="canhlon" placeholder="nhập a "></th>
+<th><input type="number" id="canhB" value="canhbe" placeholder="nhập b"></th>
+<th><input type="number" id="canhC" value="canhvua" placeholder="nhập c"></th>
+<th><input type="submit" id="tinhdientich" value="Kết quả" onclick="tinhdt()"></th>
+<p id="ketqua"></p>
+<script>
+    function tinhdt() {
+        let a = parseFloat(document.getElementById("canhA").value);
+        let b = parseFloat(document.getElementById("canhB").value);
+        let c = parseFloat(document.getElementById("canhC").value);
+
+
+        if (a == 0 && b == 0 && c == 0) {
+            document.getElementById("ketqua").innerHTML = "Phương trình vô số nghiệm"
+        } else if (a == 0 && b == 0 && c != 0) {
+            document.getElementById("ketqua").innerHTML = "Phương trình vô nghiệm"
+        } else if (a == 0 && b != 0) {
+            x = (-c) / b
+            document.getElementById("ketqua").innerHTML = "Phương trình có nghiệm x = " + x
+        } else {
+            delta = Math.pow(b, 2) - 4 * a * c
+            if (delta < 0) {
+                document.getElementById("ketqua").innerHTML = "Phương trình vô nghiệm"
+            } else if (delta == 0) {
+                x = (-b) / (2 * a)
+                document.getElementById("ketqua").innerHTML = "Phương trình có nghiệm kép x1 = x2 = " + x
+            } else {
+                x1 = ((-b) + Math.sqrt(delta)) / (2 * a);
+                x2 = ((-b) - Math.sqrt(delta)) / (2 * a);
+                document.getElementById("ketqua").innerHTML = `Phương trình có 2 nghiệm phân biệt \n x1 = ${x1} \n x2 = ${x2}`
+            }
+        }
+
+
+    }
+
+
+</script>
+
+
+</body>
+</html>
