@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+<h2>Tính tiền điện</h2>
+<th><input type="number" id="congsuat" value="congSuat" placeholder="nhập công suất tiêu thụ "></th>
+<th><input type="number" id="thoigian" value="thoiGian" placeholder="nhập thời gian tiêu thụ"></th>
+<th><input type="submit" id="tinhtd" value="Kết quả" onclick="tinhdt()"></th>
+<h3><p  id="ketqua"></p></h3>
+<script>
+    function tinhdt() {
+        let a = parseFloat(document.getElementById("congsuat").value);
+        let b = parseFloat(document.getElementById("thoigian").value);
+        let c = (a*b)
+        document.getElementById("ketqua").innerHTML = "Tiền điện bạn phải thanh toán là " + c + " VND"
+    }
+</script>
+</body>
+</html>

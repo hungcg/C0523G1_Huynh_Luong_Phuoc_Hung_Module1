@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th><input type="number" id="canhA" value="canhlon" placeholder="nhập a "></th>
+<th><input type="number" id="canhB" value="canhbe" placeholder="nhập b"></th>
+<th><input type="number" id="canhC" value="canhvua" placeholder="nhập c"></th>
+<th><input type="submit" id="tinhdientich" value="Kết quả" onclick="tinhdt()"></th>
+<p id="ketqua"></p>
+<script>
+    function tinhdt() {
+        let a = parseFloat(document.getElementById("canhA").value);
+        let b = parseFloat(document.getElementById("canhB").value);
+        let c = parseFloat(document.getElementById("canhC").value);
+
+        if (a + b > c) {
+            if (b + c > a) {
+                if (a + c > b) {
+                    document.getElementById("ketqua").innerHTML = " vậy 3 số thực trên " +
+                    "là cạnh của 1 tam giác"
+                } else {
+                    document.getElementById("ketqua").innerHTML = " vậy 3 số thực trên " +
+                    " không phải là cạnh của 1 tam giác"
+                }
+
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
