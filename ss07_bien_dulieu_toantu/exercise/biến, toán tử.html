@@ -16,6 +16,26 @@ function diemtb() {
 }
 
 </script>
+<script>
+    function doiC() {
+        let cv = parseFloat(document.getElementById("sd").value) * 3.14
+        document.getElementById("ketqua2").innerHTML = "<h1>" + cv  + "</h1>"
+
+    }
+</script>
+<script>
+    function doicf() {
+        let f = parseFloat(document.getElementById("cf").value) * 1.8 + 32
+        document.getElementById("ketqua").innerHTML = "<h1>" + f + " độ F" + "</h1>"
+    }
+</script>
+<script>
+    function tinhdt() {
+        let r = parseFloat(document.getElementById("ht").value)
+        let sdt= (r*r)*3.14
+        document.getElementById("ketqua3").innerHTML = "<h1>" + sdt  + "</h1>"
+    }
+</script>
 <table>
     <h3>Tính điểm trung bình</h3>
     <tr>
@@ -37,12 +57,7 @@ function diemtb() {
 </table>
 
 <table>
-    <script>
-        function doicf() {
-            let f = parseFloat(document.getElementById("cf").value) * 1.8 + 32
-            document.getElementById("ketqua").innerHTML = "<h1>" + f + " độ F" + "</h1>"
-        }
-    </script>
+
 
     <tr>
         <h3>Đổi độ C sang độ F</h3>
@@ -56,20 +71,8 @@ function diemtb() {
         <p id="ketqua"></p>
 </table>
 
-<!--<script>-->
-<!--    let x = +prompt("nhập vào độ C")-->
-<!--    let q = x*5/9 +32-->
-<!--    alert(q)-->
-<!--</script>-->
-
 <table>
-    <script>
-        function doiC() {
-            let cv = parseFloat(document.getElementById("sd").value) * 3.14
-            document.getElementById("ketqua2").innerHTML = "<h1>" + cv  + "</h1>"
 
-        }
-    </script>
     <h3>Tính chu vi hình tròn</h3>
     <tr>
         <td><input type="number" id="sd" placeholder="Nhập vào đường kính"></td>
@@ -80,13 +83,7 @@ function diemtb() {
 </table>
 
 <table>
-    <script>
-        function tinhdt() {
-            let r = parseFloat(document.getElementById("ht").value)
-            let sdt= (r*r)*3.14
-            document.getElementById("ketqua3").innerHTML = "<h1>" + sdt  + "</h1>"
-        }
-    </script>
+
     <h3>Tính diện tích hình tròn</h3>
     <tr>
         <td> <input type="number" id="ht" placeholder="Nhập vào bán kính"> </td>
