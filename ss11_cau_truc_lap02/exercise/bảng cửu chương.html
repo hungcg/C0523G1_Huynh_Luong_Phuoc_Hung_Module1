@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bảng cửu chương</title>
+</head>
+<body>
+<h1>Bảng Cửu Chương</h1>
+<script>
+    let tinh, a, b;
+    tinh = "<table border='1' width='300' cellspacing='0' cellpadding='15'>";
+    for (a = 1; a <= 9; a++) {
+    tinh = tinh + "<tr>";
+    for (b = 1; b <= 9; b++) {
+        tinh = tinh + "<td>" + a + "x" + b + "=" + a * b + "</td>";
+    }
+    tinh = tinh + "</tr>";
+    }
+    tinh = tinh + "</table>";
+    document.write(tinh);
+</script>
+</body>
+</html>
