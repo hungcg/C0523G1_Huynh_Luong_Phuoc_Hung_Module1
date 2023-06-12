@@ -5,7 +5,22 @@
     <title>Tính lãi ngân hàng</title>
 </head>
 <body>
+<script>
+    let loan = parseInt(prompt("Nhập số tiền vay: "));
+    let month = parseInt(prompt("Nhập số tháng: "));
+    let amount1 = (loan * 0.09) / month;
+    let amount2 = (loan * 0.1) / month;
+    let amount3 = (loan * 0.08) / month;
+    if (month > 12 && month < 24) {
+        alert("Số tiền phải đóng: " + amount1 + " Đ");
+    } else if (month < 12) {
+        alert("Số tiền phải đóng: " + amount3 + " Đ");
+    } else {
+        alert("Số tiền phải đóng: " + amount2 + " Đ");
+    }
 
+
+</script>
 
 </body>
 </html>
