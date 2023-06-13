@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = 0
+  let b = 1
+  let i;
+  let daySo = "<br>"
+  for (let j = 0; j < 20 ; j++) {
+    i= a+b
+    daySo += i +"<br>"
+    a=b
+    b=i
+    if( i%5===0){
+      document.write(i)
+      break
+    }
+
+  }
+
+</script>
+
+</body>
+</html>
