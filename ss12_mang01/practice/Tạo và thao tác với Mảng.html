@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thao tác với mảng</title>
+</head>
+<body>
+<form>
+    <input type="text" id="bien" placeholder="nhập biến bạn muốn thêm">
+    <input type="submit" id="add" value="Add" onclick="addvar();"/>
+    <input type="submit" id="display" value="Display" onclick="dispvar();"/>
+    <p id="result"></p>
+</form>
+<script>
+    let a = 0;
+    let mang = Mang();
+
+    function addvar() {
+        mang[a] = document.getElementById("bien").value;
+        alert("phần tử" + mang[a] + "đã được thêm vào" + a);
+        a++;
+        document.getElementById("bien").value = "";
+    }
+
+    function dispvar() {
+        let b = "<hr/>";
+        for (let i = 0; i < mang.length; i++) {
+            b += "phần tử" + i + "=" + mang[i] + "</br>";
+        }
+        document.getElementById("result").innerHTML = b;
+
+    }
+</script>
+</body>
+</html>

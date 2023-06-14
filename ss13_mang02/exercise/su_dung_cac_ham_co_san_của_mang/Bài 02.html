@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("mời nhập dãy số bất kì");
+    let chuyen= a.toString();
+    let result = [chuyen[0]]
+    for (let i = 1; i <chuyen.length ; i++) {
+        if((chuyen[i-1]%2===0)&& (chuyen[i]%2===0))
+        {
+            result.push("-",chuyen[i]);
+        }else{
+            result.push(chuyen[i]);
+        }
+    }
+    document.write(result.join(''))
+</script>
+</body>
+</html>

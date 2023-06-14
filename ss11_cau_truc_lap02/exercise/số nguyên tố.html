@@ -6,22 +6,22 @@
 </head>
 <body>
 <script>
-    let n = 2//xét số nt
-    let tinh = 0 //số lần đủ để kết thúc
+    let n = 2;//xét số nt
+    let tinh = 0; //số lần đủ để kết thúc
     do {
         debugger
         let count = 0 //biến đếm của n
         for (let i = 1; i <= n; i++) {
             if (n % i === 0) {
-                count++
+                count++;
             }
         }
         if (count === 2) {
-            document.write(n + "<br>")
-            tinh++
+            document.write(n + "<br>");
+            tinh++;
         }
-        n++
-    } while (tinh < 20)
+        n++;
+    } while (tinh < 20);
 
 </script>
 

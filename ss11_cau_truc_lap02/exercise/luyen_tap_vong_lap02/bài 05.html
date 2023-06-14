@@ -6,13 +6,13 @@
 </head>
 <body>
 <script>
-    let a = +prompt("nhập số tiền bạn muốn vay")
-    let b = +prompt("số tháng hoàn trả khoản vay")
-    let c = +prompt("lãi hàng tháng (%)")
+    let a = +prompt("nhập số tiền bạn muốn vay");
+    let b = +prompt("số tháng hoàn trả khoản vay");
+    let c = +prompt("lãi hàng tháng (%)");
     for (let i = 1; i <= b; i++) {
         a = a * (1 + c / 100)
     }
-    document.write("số tiền sau" + b + " tháng bạn phải trả là " + a + "VND")
+    document.write("số tiền sau" + b + " tháng bạn phải trả là " + a + "VND");
 
 </script>
 </body>
