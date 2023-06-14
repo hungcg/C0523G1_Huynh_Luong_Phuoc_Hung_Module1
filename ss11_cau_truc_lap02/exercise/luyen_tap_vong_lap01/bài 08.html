@@ -6,7 +6,20 @@
 </head>
 <body>
 <script>
-    let
+    let a =+prompt("khoảng lớn nhất bạn muốn đoán là bao nhiêu?");
+    let b =+prompt("khoảng nhỏ nhất bạn muốn đoán là bao nhiêu?");
+    let random = Math.floor(Math.random() *(a - b + 1)) + b;
+    let number= +prompt("Nhập số bạn đoán đi");
+
+    for (let i =1;i<=3;i++) {
+        if (number > random) {
+            number= +prompt("số bạn đoán bé hơn,đoán lại xem");
+        } else if (number < random) {
+            number= +prompt("số bạn đoán lớn hơn,đoán lại xem");
+        } else {
+            alert("chúc mừng bạn đã đoán đúng");
+        }
+    }
 </script>
 
 </body>
