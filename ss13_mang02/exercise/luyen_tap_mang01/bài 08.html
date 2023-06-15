@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let songuyen = []
+    alert('Nhập vào 10 số');
+    for (let i = 0; i < 10; i++) {
+        songuyen[i] = +prompt("nhập số thứ" + (i + 1) + "vào đây");
+    }
+    for (let i = 0; i < songuyen.length; i++) {
+        songuyen.sort()
+        songuyen.reverse()
+    }
+    document.write(songuyen);
+</script>
+
+</body>
+</html>

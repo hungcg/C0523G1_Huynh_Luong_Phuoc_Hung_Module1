@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let songuyenA = []
+    let songuyenB = []
+    let songuyenC;
+    alert('Nhập vào 10 số dãy A');
+    for (let i = 0; i < 10; i++) {
+        songuyenA[i] = +prompt("nhập số thứ" + (i + 1) + "vào đây");
+    }
+    alert('Nhập vào 10 số dãy B');
+    for (let i = 0; i < 10; i++) {
+        songuyenB[i] = +prompt("nhập số thứ" + (i + 1) + "vào đây");
+    }
+   songuyenC =songuyenA.concat(songuyenB)
+    alert("Vậy chuỗi 2 dãy số đã nhập là: " + songuyenC.join("-"))
+
+
+</script>
+
+</body>
+</html>

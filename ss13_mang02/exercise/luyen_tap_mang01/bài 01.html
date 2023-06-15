@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên lớn hơn 10 </title>
+</head>
+<body>
+<script>
+    let songuyen = [];
+    alert('Nhập vào 10 số');
+    for (let i = 0; i < 10; i++) {
+        songuyen[i] = +prompt("nhập số thứ" + (i + 1) + "vào đây");
+    }
+    let ten = [];
+
+    for (let i = 0; i < songuyen.length; i++) {
+        if (songuyen[i] >= 10) {
+            ten.push(songuyen[i]);
+
+        }
+    }
+    document.write("số >=10 trong các số vừa nhập là  " + ten.join('-'));
+
+</script>
+
+</body>
+</html>

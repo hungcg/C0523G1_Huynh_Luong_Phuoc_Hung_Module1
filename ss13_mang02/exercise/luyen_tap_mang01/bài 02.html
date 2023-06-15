@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let showMax = "";
+    let songuyen = []
+    alert('Nhập vào 10 số');
+    for (let i = 0; i < 10; i++) {
+        songuyen[i] = +prompt("nhập số thứ" + (i + 1) + "vào đây");
+    }
+    document.write(songuyen + '</br>');
+    let max = songuyen[0]
+    for (let i = 1; i < songuyen.length; i++) {
+        if (max < songuyen[i]) {
+            max = songuyen[i]
+            showMax = i
+        }
+    }
+    document.write("Số lớn nhất là: " + max + " tại vị trí là : " + showMax);
+</script>
+</body>
+</html>

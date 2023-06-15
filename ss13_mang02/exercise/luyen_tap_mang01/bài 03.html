@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sum = 0;
+    let songuyen = []
+    alert('Nhập vào 10 số');
+    for (let i = 0; i < 10; i++) {
+        songuyen[i] = +prompt("nhập số thứ" + (i + 1) + "vào đây");
+        sum += songuyen[i]/10
+    }
+    document.write(songuyen + '</br>');
+    let max = songuyen[0]
+    for (let i = 1; i < songuyen.length; i++) {
+        if (max < songuyen[i]) {
+            max = songuyen[i]
+
+        }
+    }
+    document.write("Số lớn nhất là: " + max + " và các số trên có giá trị trung bình là : " + sum);
+</script>
+</script>
+
+</body>
+</html>

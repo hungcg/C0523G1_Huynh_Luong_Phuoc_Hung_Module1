@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Từ điển đơn giản 5 từ</h3>
+<h4>pencil<br>
+    ruler <br>
+    pen <br>
+    table <br>
+    chair <br></h4>
+<input type="text" id="translate" placeholder="nhập từ bạn muốn dịch">
+<input type="submit" value="Dịch" onclick="trans()">
+<h2 id="vietrans"></h2>
+<script>
+
+
+    function trans() {
+        let eng = ["pencil", "ruler", "pen", "table", "chair"];
+        let vie = ["bút chì", "thước ", "bút bi", "bàn", " ghế"];
+        let word = document.getElementById("translate").value;
+        let sum = 0;
+        let vietrans = '';
+        for (let i = 0; i < eng.length; i++) {
+            if (word === eng[i]) {
+                sum = i
+                for (let j = 0; j < vie.length; j++) {
+                    if (sum === j) {
+                        vietrans = vie[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("vietrans").innerHTML = vietrans
+    }
+</script>
+</body>
+</html>

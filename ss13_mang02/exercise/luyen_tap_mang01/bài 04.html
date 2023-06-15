@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let songuyen = []
+    alert('Nhập vào 10 số');
+    for (let i = 0; i < 10; i++) {
+        songuyen[i] = +prompt("nhập số thứ" + (i + 1) + "vào đây");
+    }
+    for(let i = songuyen.length - 1; i >= 0; i--) {
+        document.writeln(songuyen[i]);
+    }
+
+</script>
+</body>
+</html>
