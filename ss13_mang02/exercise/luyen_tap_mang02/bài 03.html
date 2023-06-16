@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = ['a', 'd', 'f', 4, 5, 1, 2, 3]
+    let showNum = [];
+    let longarr = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (typeof string[i] === "number") {
+            longarr = i
+            showNum.push(string[i])
+        }
+    }
+    document.write("mảng có " + longarr + " phần tử và  các phần tử dạng số trong mảng đó là " + showNum)
+</script>
+
+</body>
+</html>
