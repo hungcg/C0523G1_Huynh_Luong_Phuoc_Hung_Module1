@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    let number = +prompt("nhập số cần kiểm tra");
+    checknt(number);
+
+    function checknt(number) {
+        let demuoc = 0;
+        let checkso = false;
+        if (number === 0) {
+            alert(number + "không phải là số nguyên tố")
+        } else
+            for (let i = 2; i <= number; i++) {
+                if (number % i === 0) {
+                    demuoc++;
+                }
+            }
+
+        if (demuoc === 2) {
+            checkso = true;
+        }
+        if (checkso) {
+            alert(number + " là số nguyên tố");
+        } else {
+            alert(number + "không phải là số nguyên tố");
+
+        }
+    }
+
+</script>
+
+</body>
+</html>

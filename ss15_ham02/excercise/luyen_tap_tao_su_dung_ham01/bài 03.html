@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra 2 số nguyên</title>
+</head>
+<body>
+<script>
+  function check1(numberA,numberB){
+    if (numberA > numberB){
+      checkso = alert(numberA +" lớn hơn "+ numberB)
+      return checkso;
+    }
+  }
+  function check2(numberA,numberB){
+    if (numberA<=numberB ){
+      sum = numberA +numberB
+      return sum;
+
+    }
+  }
+  let numberA= +prompt("nhập số đầu tiên");
+  let numberB= +prompt("nhập số đầu tiên");
+  check1(numberA,numberB);
+  check2(numberA,numberB);
+  document.write("tổng 2 số là : "+ sum)
+</script>
+
+</body>
+</html>

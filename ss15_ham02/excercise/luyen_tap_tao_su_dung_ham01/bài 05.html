@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra tên ngôi sao</title>
+</head>
+<body>
+<script>
+    function checkname(call) {
+
+        bingo = alert("ngôi sao " + call + " có tên chòm sao là " + bingoname);
+        return bingo;
+    }
+
+    let star = ["polaris", "aldebaran", "deneb", "vega", "altair", "dubhe", "regulus"]
+    let namestar = ["ursaminor", "tarurus", "cygnus", "lyra", "aquila", "ursamajor", "leo"]
+    let call = prompt("nhập tên ngôi sao")
+    let pos = 0;
+    bingoname = ''
+    checkname(call);
+    for (let i = 0; i < star.length; i++) {
+        if (call === star[i])
+            pos = star[i]
+        for (let j = 0; j < namestar.length; j++) {
+            if (pos === j) {
+                bingoname = namestar[j]
+            } else {
+                alert("không có ngôi sao này")
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

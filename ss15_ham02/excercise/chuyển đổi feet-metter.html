@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đôi foot sang metter và ngược lại</title>
+</head>
+<body>
+<script>
+
+    function doifoot(numA) {
+        foot = numA * 0.305;
+        return foot;
+    }
+
+    function doimetter(numB) {
+        metter = numB * 3.279;
+        return metter;
+    }
+
+    let numA = +prompt("nhập vào foot");
+    let numB = +prompt("nhập vào metter");
+    doimetter(numB);
+    doifoot(numA);
+    document.write(numA + " foot" + "=" + foot + " metter" + "</br>");
+    document.write(numB + " metter " + "=" + metter + " foot");
+</script>
+
+</body>
+</html>

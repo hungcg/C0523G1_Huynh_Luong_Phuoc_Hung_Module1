@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên nhỏ nhất</title>
+</head>
+<body>
+<script>
+    function check(num1,num2,num3){
+        if (num1<num2 && num1<num3){
+            min = alert(num1+ "là số nhỏ nhất")
+        }else if(num2<num3){
+            min = alert(num2+ "là số nhỏ nhất")
+        }else{
+            min=alert(num3+ " là số nhỏ nhất")
+        }
+
+    }
+    let num1= +prompt("nhập vào số đầu")
+    let num2= +prompt("nhập vào số thứ 2")
+    let num3= +prompt("nhập vào số cuối")
+    check(num1,num2,num3);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính chu vi diện tích hình tròn</title>
+</head>
+<body>
+<script>
+    function chinhtron(num) {
+        chuvi = (2*num) * 3.14;
+        return chuvi;
+    }
+
+    function shinhtron(num) {
+        dientich = (num * num) * 3.14;
+        return dientich;
+    }
+    let num =+prompt("nhập vào bán kính hình tròn");
+    chinhtron(num);
+    shinhtron(num);
+    document.write("chu vi hình tròn = " + chuvi+"</br>");
+    document.write("diện tích hình tròn = " + dientich );
+</script>
+
+</body>
+</html>
