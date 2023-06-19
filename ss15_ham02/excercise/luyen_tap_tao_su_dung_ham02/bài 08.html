@@ -7,20 +7,21 @@
 <body>
 <script>
     function change(abc) {
-        daonguoc = alert(dayso)
-        return daonguoc;
+        daySo = []
+        let pos = 0;
+        for (let i = abc.length - 1; i >= 0; i--) {
+            daySo [pos] = abc[i];
+            pos++;
+        }
+        return daySo;   
+
     }
 
-    let dayso = []
-    let abc=0;
+    let abc = []
     for (let i = 0; i < 3; i++) {
-        abc = +prompt("nhập vào 3 số nguyên")
-        abc[i]= abc
-            dayso.push(abc[i])
-
+        abc[i] = +prompt("nhập vào 3 số nguyên")
     }
-    change(abc);
-
+    document.write(change(abc))
 
 
 </script>

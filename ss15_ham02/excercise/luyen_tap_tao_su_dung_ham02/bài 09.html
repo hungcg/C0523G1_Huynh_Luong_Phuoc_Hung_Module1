@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let randomarr = [1, 2, 3, 4, 1, 1, 7, 8, 9, 10]
+    let a = +prompt("nhập vào kí tự bất kì ")
+     document.write(check(a))
+
+    function check(b) {
+        let count = 0;
+        for (let i = 0; i < randomarr.length; i++) {
+            if (b === randomarr[i]) {
+                count ++;
+            }
+
+        }return 'số lần xuất hiện của ' + b  + ' là: ' + count;
+    }
+</script>
+
+</body>
+</html>
