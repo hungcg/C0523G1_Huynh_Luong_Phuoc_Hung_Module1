@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<Script>
+    class Cellphone {
+        constructor(battery, draft, send, receive, status) {
+            this.battery = battery;
+            this.draft = draft;
+            this.send = send;
+            this.receive = receive;
+            this.status = status;
+        }
+
+        checkStatus() {
+            if (this.status) {
+                alert("Điện thoại đang bật");
+            } else {
+                alert("Điện thoại đang tắt");
+            }
+        }
+
+        turnOn() {
+            if (this.status) {
+                alert("Điện thoại đã bật rồi!!");
+            } else {
+                this.status = true;
+                this.battery--;
+            }
+        }
+
+        turnOff() {
+            if (this.status) {
+                this.status = false;
+                this.battery--;
+            } else {
+                alert("Điện thoại đã tắt rồi!!");
+            }
+        }
+
+        setbattery(battery) {
+            this.battery = battery;
+        }
+
+        setDraft(message) {
+            if (this.status) {
+                this.draft.unshift(message);
+                this.battery--;
+            } else {
+                alert("turn on the phone");
+            }
+        }
+
+        sendMessage(mobileTo, message) {
+            if (this.status) {
+                this.send.unshift(message);
+                mobileTo.receive.unshift(message);
+                this.battery--;
+            } else {
+                alert("turn on the phone");
+            }
+        }
+
+        receiveMessage(mess) {
+            if (this.status) {
+                this.receive.unshift(mess);
+                this.battery--;
+            } else {
+                alert("turn on the phone");
+            }
+        }
+
+        getSendMessage() {
+            if (this.status) {
+                this.battery--;
+                return this.send;
+            } else {
+                alert("turn on the phone");
+            }
+        }
+
+        getReceiveMessage() {
+            if (this.status) {
+                this.battery--;
+                return this.receive;
+            } else {
+                alert("turn on the phone");
+            }
+        }
+    }
+
+    let nokia = new Cellphone(50, [], [], [], true);
+    let iphone = new Cellphone(20, [], [], [], false);
+    document.write(nokia.battery + "%" + "<br/>");
+    document.write(iphone.battery + "%" + "<br/>")
+    nokia.setDraft("go out....?");
+    nokia.sendMessage(iphone, "go out and drink something?");
+    document.write("inbox: " + nokia.send + "<br/>");
+    document.write("mess receive: " + iphone.receive + "<br/>");
+    document.write("outbox: " + nokia.getSendMessage() + "<br/>")
+
+</Script>
+</body>
+</html>
