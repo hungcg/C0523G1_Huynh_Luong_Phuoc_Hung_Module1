@@ -7,50 +7,84 @@
 <body>
 <div id="game"></div>
 <script>
-    function Hero(image, top, left, size,speed){
-        this.image = image;
-        this.top = top;
-        this.left = left;
-        this.size = size;
-        this.speed =speed;
+    class Hero {
+        constructor(image, top, left, size) {
 
-        this.getHeroElement = function(){
-            return '<img width="'+ this.size + '"' +
-                ' height="'+ this.size + '"' +
-                ' src="' + this.image +'"' +
-                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+            this.direction = "right";
         }
 
-        this.moveRight = function(){
-            this.left += this.speed;
-        }
-        this.moveLeft = function (){
-            this.left -= this.speed
-        }
-        this.moveUp =function (){
-            this.top += this.speed
-        }
-        this.moveDown =function (){
-            this.top -= this.speed
+        getHeroElement = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
         }
 
+        moveRight() {
+            this.left += 20
+        }
+
+        moveLeft() {
+            this.left -= 20
+        }
+
+        moveDown() {
+            this.top += 20
+        }
+
+        moveUp() {
+            this.top -= 20
+        }
+
+        changeDirection() {
+            if (this.direction === "right") {
+                this.direction = "down";
+            } else if (this.direction === "down") {
+                this.direction = "left"
+            } else if (this.direction === "left") {
+                this.direction = "up"
+            } else if (this.direction === "up") {
+                this.direction = "right"
+            }
+        }
     }
 
-    let hero = new Hero('hinhanh1.png', 5, 10, 100,50);
+    let hero = new Hero('hinhanh1.png', 20, 20, 200);
 
-    function start(){
-        if(hero.left < window.innerWidth - hero.size){
+    function start() {
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        if (hero.direction === "right") {
             hero.moveRight();
-            hero.moveUp()
-
-        }else {
-            hero.moveLeft()
+            if (hero.left + hero.size > width) {
+                hero.changeDirection()
+            }
+        } else if (hero.direction === "down") {
+            hero.moveDown();
+            if (hero.top + hero.size > height) {
+                hero.changeDirection()
+            }
+        } else if (hero.direction === "left") {
+            hero.moveLeft();
+            if (hero.left < 0) {
+                hero.changeDirection()
+            }
+        } else if (hero.direction === "up") {
+            hero.moveUp();
+            if (hero.top < 0) {
+                hero.changeDirection()
+            }
         }
         document.getElementById('game').innerHTML = hero.getHeroElement();
-        setTimeout(start, 1000)
+        setTimeout(start, 30)
     }
+
     start();
-    </script>
+</script>
 
 </body>
 </html>
