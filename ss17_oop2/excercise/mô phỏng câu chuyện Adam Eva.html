@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weightapp) {
+            this.weightapp = weightapp;
+        }
+
+        getAppWei() {
+            return this.weightapp;
+        }
+
+        setAppWei(weightapp) {
+            return this.weightapp = weightapp
+        }
+
+        overApp() {
+            if (this.weightapp <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        cutApp() {
+            if (this.overApp()) {
+                alert("over of apple")
+            } else {
+                this.weightapp--;
+            }
+        }
+    }
+
+
+    class Human {
+        constructor(name, weight, gender) {
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWei() {
+            return this.weight;
+        }
+
+        setWei() {
+            this.weight = weight;
+        }
+
+        checkGen() {
+            if (this.gender) {
+                alert("Male");
+            } else {
+                alert("Female")
+            }
+        }
+
+        eat(apple) {
+            if (apple.getAppWei() > 0) {
+                alert(this.name + " yummy");
+                apple.overApp();
+                this.weight++;
+            } else {
+                alert("out of apple")
+            }
+        }
+
+        say(something) {
+            alert(something)
+        }
+
+
+    }
+
+    let apple = new Apple(10)
+    let adam = new Human("Adam", 65, "Male");
+    let eva = new Human("Eva", 50, "Female");
+    adam.say("what's up, im Adam, how do u do?")
+    eva.say("what's up, im Eva, Nice to meet u?")
+    adam.getWei()
+    eva.getWei()
+
+    adam.checkGen()
+    adam.eat(apple);
+    document.write("Apple status " + apple.weightapp + "<br/>");
+    document.write("Adam weight " + adam.name + " iz " + adam.weight + "<br/>");
+
+    eva.checkGen()
+    eva.eat(apple);
+    document.write("Apple status  " + apple.weightapp + "<br/>");
+    document.write("Adam weight " + eva.name + " iz " + eva.weight + "<br/>");
+
+</script>
+</body>
+</html>
