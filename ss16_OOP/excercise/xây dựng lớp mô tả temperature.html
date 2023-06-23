@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    class heat {
+    class Heat {
         constructor(celsius) {
             this.celsius = celsius;
         }
@@ -20,7 +20,8 @@
 
         }
     }
-    let temperature = new heat(+prompt("nhập vào độ C"));
+    let celsius = +prompt("nhập vào độ C")
+    let temperature = new Heat(celsius);
     document.write(temperature.getFahrenheit()+" Độ F "+"</br>");
     document.write(temperature.getKelvins() +" Độ K "+"</br>");
 </script>

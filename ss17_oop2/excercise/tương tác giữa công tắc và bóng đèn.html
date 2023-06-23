@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
+<input type="submit" value="turn on" onclick="turnOn()">
+<input type="submit" value=" turn off" onclick="turnOff()">
 <script>
   class Lamp{
     constructor(status) {
@@ -12,6 +14,9 @@
     }
     getStatus(){
       return this.status;
+    }
+    setStatus(status){
+        this.status= status;
     }
   }
 
@@ -40,17 +45,27 @@
     switchOn(){
       this.lamp.status = "on";
       return this.status = "on";
+
     }
   }
 
 
-  let Lamp01 = new Lamp("off");
+  let light01 = new Lamp("off");
 
-  let open = new SwitchButton(Lamp01,"off");
-
-  open.switchOn();
-  alert('Switch '+ open.status);
-  alert ("Lamp iz  "+ Lamp01.status);
+  let open = new SwitchButton(light01,"off");
+function turnOn() {
+    open.switchOn();
+    alert('Switch ' + open.status);
+    alert("Lamp iz  " + light01.status);
+}
+    function turnOff(){
+    open.switchOff();
+    alert('Switch '+ open.status);
+    alert ("Lamp iz  "+ light01.status);
+}
+  // open.switchOn();
+  // alert('Switch '+ open.status);
+  // alert ("Lamp iz  "+ light01.status);
 
   // let open= new SwitchButton("on")
   // let lamp= new Lamp("off")

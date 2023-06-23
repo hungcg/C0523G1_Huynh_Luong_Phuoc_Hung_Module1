@@ -7,20 +7,20 @@
 <body>
 <script>
     class Apple {
-        constructor(weightapp) {
-            this.weightapp = weightapp;
+        constructor(weightApp) {
+            this.weightApp = weightApp;
         }
 
         getAppWei() {
-            return this.weightapp;
+            return this.weightApp;
         }
 
-        setAppWei(weightapp) {
-            return this.weightapp = weightapp
+        setAppWei(weightApp) {
+            return this.weightApp = weightApp
         }
 
         overApp() {
-            if (this.weightapp <= 0) {
+            if (this.weightApp <= 0) {
                 return true;
             } else {
                 return false;
@@ -31,7 +31,7 @@
             if (this.overApp()) {
                 alert("over of apple")
             } else {
-                this.weightapp--;
+                this.weightApp--;
             }
         }
     }
@@ -71,7 +71,7 @@
         eat(apple) {
             if (apple.getAppWei() > 0) {
                 alert(this.name + " yummy");
-                apple.overApp();
+                apple.cutApp();
                 this.weight++;
             } else {
                 alert("out of apple")
@@ -95,12 +95,12 @@
 
     adam.checkGen()
     adam.eat(apple);
-    document.write("Apple status " + apple.weightapp + "<br/>");
+    document.write("Apple status " + apple.weightApp + "<br/>");
     document.write("Adam weight " + adam.name + " iz " + adam.weight + "<br/>");
 
     eva.checkGen()
     eva.eat(apple);
-    document.write("Apple status  " + apple.weightapp + "<br/>");
+    document.write("Apple status  " + apple.weightApp + "<br/>");
     document.write("Adam weight " + eva.name + " iz " + eva.weight + "<br/>");
 
 </script>
