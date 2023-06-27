@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let menu = ['Coffee (Price : 15.000 VND)', 'Orange juice(Price: 20.000 VND)', 'Carrot juice (Price: 20.000 VND)', 'Tomato juice (Price: 20.000 VND)', 'Water  (Price:10.000 VND)', 'Coconut (Price :25.000 VND)'];
+    let orderList;
+    let flag;
+    let sum = 0;
+
+
+    do {
+        orderList = +prompt('Order Menu: \n 1.Cafe \n 2.Orange juice \n 3. Carrot juice \n 4.Tomato juice \n 5. Water \n 6.Coconut \n 7.Finish Order');
+        let quantity = 0;
+
+        if (orderList === 7) {
+            flag = confirm('finish order ?');
+        }
+        if (flag === true) {
+            alert('Thank you for your order !');
+            break;
+        }
+
+        switch (orderList) {
+            case 1:
+                quantity = +prompt(`${menu[0]} quantity ?`);
+                sum += quantity * 12.000;
+                break;
+            case 2:
+                quantity = +prompt(`${menu[1]} quantity ?`);
+                sum += quantity * 15.000;
+                break;
+            case 3:
+                quantity = +prompt(`${menu[2]} quantity ?`);
+                sum += quantity * 12.000;
+                break;
+            case 4:
+                quantity = +prompt(`${menu[3]} quantity ?`);
+                sum += quantity * 12.000;
+                break;
+            case 5:
+                quantity = +prompt(`${menu[4]} quantity ?`);
+                sum += quantity * 10.000;
+                break;
+            case 6:
+                quantity = +prompt(`${menu[5]} quantity ?`);
+                sum += quantity * 13.000;
+                break;
+        }
+
+    } while (orderList < 7 || flag === false);
+
+    if (sum > 0) {
+        alert('Total bill you must pay: ' + sum + '.000 VND');
+    }
+</script>
+</body>
+</html>
