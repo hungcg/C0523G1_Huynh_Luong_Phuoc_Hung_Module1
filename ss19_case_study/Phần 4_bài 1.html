@@ -7,6 +7,32 @@
 <body>
 <script>
 
+    let string = prompt("nhập vào chuỗi kí tự ");
+    let lower = string.toLowerCase();
+    let upper = string.toUpperCase();
+    let word = upper[0];
+    for (let i = 1; i < string.length; i++) {
+        if (string[i - 1] === " ") {
+            if (string[i] !== " ") {
+                word += upper[i];
+            }
+        } else {
+            word += lower[i];
+        }
+    }
+
+    word2 = word.split(" ");
+    let position = 0;
+    let maxtext = word2[0].length;
+    for (let i = 0; i < word2.length; i++) {
+        if (maxtext < word2[i].length) {
+            maxtext = word2[i].length;
+            position = i;
+        }
+    }
+    document.write("Chuỗi bạn nhập vào : " + string + "<br>");
+    document.write("Chuỗi sau khi chuẩn hóa : " + word + "<br>");
+    document.write("Chữ dài nhất : " + word2[position]);
 </script>
 </body>
 </html>
