@@ -6,15 +6,16 @@
 </head>
 <body>
 <script>
-    for (let i = 1; i < 6; i++) {
-        document.write("*");
-        for (let j = 1; j < 5; j++) {
-            document.write("*")
-        }if(j===1 && i !==2 && i!==3 && i!==4){
-            document.write("&sbsp")
-
+    let chieuCao = +prompt("hãy nhập chiều cao của tam giác");
+    for (let i = 1; i <= chieuCao; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (j === 1 || i === 1  || i === j || i===chieuCao ) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
         }
-        document.write("</br>")
+        document.write("</br>");
     }
 
 
