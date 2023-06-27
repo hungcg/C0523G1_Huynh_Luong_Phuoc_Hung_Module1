@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = +prompt("Nhập hàng ");
+    let col = +prompt("Nhập cột");
+    let arrnew = [];
+    count = 0;
+    let sum = 0;
+    for (let i = 0; i < row; i++) {
+        arrnew[i] = [];
+        for (let j = 0; j < col; j++) {
+            arrnew[i][j] = +prompt(`Nhập vào phần tử  [${i}][${j}]`);
+            if (checkNumber(arrnew[i][j])) {
+                count++
+
+            }
+        }
+    }
+
+    function checkNumber(number) {
+
+        let find = 0;
+        for (let i = 0; i <= number; i++) {
+            if (number % i === 0) {
+                find++;
+            }
+        }
+        if (find === 2) {
+            return true;
+        }
+    }
+
+    checkNumber();
+    document.write(count)
+
+</script>
+
+</body>
+</html>

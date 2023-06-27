@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let row = +prompt("Nhập hàng ");
+  let col = +prompt("Nhập cột");
+  let arrnew = [];
+  let sum = 0;
+  for (let i = 0; i < row; i++) {
+    arrnew[i] = [];
+    for (let j = 0; j < col; j++) {
+      arrnew[i][j] = +prompt(`Nhập vào phần tử của ma trận [${i}][${j}]`);
+      if (arrnew[i][j] % 2 === 0) {
+        sum = sum + arrnew[i][j];
+      }
+    }
+  }
+  document.write("tổng các số chẵn trong ma trận m*n = " + sum);
+
+</script>
+</body>
+</html>

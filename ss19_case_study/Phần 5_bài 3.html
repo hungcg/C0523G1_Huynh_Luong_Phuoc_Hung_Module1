@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = +prompt("Nhập hàng ");
+    let col = +prompt("Nhập cột");
+    let arrnew = [];
+    count = 0;
+    let sum = 0;
+    for (let i = 0; i < row; i++) {
+        arrnew[i] = [];
+        for (let j = 0; j < col; j++) {
+            arrnew[i][j] = +prompt(`Nhập vào phần tử  [${i}][${j}]`);
+        }
+    }
+
+    function checkMax(number) {
+        let max = number[0][0]
+        for (let i = 0; i < number.length; i++) {
+            for (let j = 0; j < number[i].length; j++) {
+                if (max < number[i][j]) {
+                    max = number[i][j]
+                }
+
+            }
+
+        }
+        return "số lớn nhất trong ma trận là "+ max
+    }
+
+
+    function checkMin(number) {
+        let min = number[0][0]
+        for (let i = 0; i < number.length; i++) {
+            for (let j = 0; j < number[i].length; j++) {
+                if (min > number[i][j]) {
+                    min = number[i][j];
+                }
+            }
+
+        }
+        return "số bé nhất trong ma trận là "+ min
+    }
+
+    document.write(checkMin(arrnew)+"</br>");
+    document.write(checkMax(arrnew));
+</script>
+
+</body>
+</html>
