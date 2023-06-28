@@ -6,18 +6,18 @@
 </head>
 <body>
 <script>
-    let arr = 'abczxciwnaqwkhasjdnaswqiqweuabc'
+    let arr = 'abczxciwnaqwkhasjdnaswqiqweuabc';
     let arrnew = arr.split('');
 
     for (let i = 0; i < arrnew.length; i++) {
         for (let j = i + 1; j < arrnew.length; j++) {
             if (arrnew[i] === arrnew[j]) {
-                arrnew.splice(j, 1);
+                arrnew.splice(j,1);
             }
         }
     }
-    document.write(arrnew.length + " kí tự khác nhau" + "</br>")
-    document.write(arrnew.length + " kí tự khác nhau đó là: " + arrnew)
+    document.write(arrnew.length + " kí tự khác nhau" + "</br>");
+    document.write(arrnew.length + " kí tự khác nhau đó là: " + arrnew);
 
 </script>
 </body>
