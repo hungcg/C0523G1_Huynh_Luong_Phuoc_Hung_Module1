@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="submit" value="Thêm mới học viên" onclick="makeNew()">
+<input type="submit" value="Sửa thông tin học viên" onclick="edit()">
+<input type="submit" value="Xóa học viên" onclick="deleted()">
+<br><br><br>
+<div id="table"></div>
+
+<script>
+    class Student {
+        constructor(code, name, course, email, birth) {
+            this.code = code;
+            this.name = name;
+            this.course = course;
+            this.email = email;
+            this.birth = birth;
+        }
+    }
+
+    let case1 = new Student("HV-001", "Nguyễn Văn A", "C1022G1", "nguyenvana@gmail.com", "01-01-2004");
+    let case2 = new Student("HV-002", "Nguyễn Văn B", "C1122G1", "nguyenvanb@gmail.com", "02-02-2004");
+    let case3 = new Student("HV-003", "Nguyễn Thị C", "C1022G1", "nguyenvana@gmail.com", "03-03-2004");
+    let listCase = [case1, case2, case3];
+    studentList(listCase);
+
+    function studentList(list) {
+        let table = `<table border='1' style="border-collapse: collapse" cellpadding="12">
+        <thead>
+        <tr>
+        <th>Mã học viên</th>
+        <th>Tên</th>
+        <th>Lớp</th>
+        <th>Email</th>
+        <th>Ngày sinh</th>
+        </tr>
+        </thead>`
+        for (let i = 0; i < list.length; i++) {
+            table += `<tbody>
+                <tr>
+                <td>${list[i].code}</td>
+                <td>${list[i].name}</td>
+                <td>${list[i].course}</td>
+                <td>${list[i].email}</td>
+                <td>${list[i].birth}</td>
+                </tr>
+                </tbody>`
+        }
+        table += "</table>"
+        document.getElementById("table").innerHTML = table;
+    }
+
+    studentList(listCase)
+
+
+    function makeNew() {
+        let makeID = prompt("nhập mã học viên");
+        let makeName = prompt("nhập tên học viên");
+        let makeCourse = prompt("nhập lớp");
+        let makeEmail = prompt("nhập email học viên");
+        let makeBirth = prompt("nhập ngày sinh học viên");
+        let makeStudent = new Student(makeID, makeName, makeCourse, makeEmail, makeBirth);
+        listCase.push(makeStudent);
+        studentList(listCase);
+    }
+
+    function edit() {
+        let changeInfo = prompt("nhập vào mã học viên");
+        let flag = false;
+        for (let i = 0; i < listCase.length; i++) {
+            if (changeInfo === listCase[i].code) {
+                listCase[i].name = prompt("đổi tên học viên");
+                listCase[i].course = prompt("đổi lớp học viên");
+                listCase[i].email = prompt("đổi email học viên");
+                listCase[i].birth = prompt("đổi ngày sinh học viên");
+                flag = true;
+                break;
+            }
+
+        }
+        if (flag === false) {
+            alert("Sai mã học viên");
+        }
+        studentList(listCase);
+    }
+
+    function deleted() {
+        let clearInfo = prompt("nhập vào mã học viên");
+        let flag = false;
+        for (let i = 0; i < listCase.length; i++) {
+            if (clearInfo === listCase[i].code) {
+                listCase.splice(i, 1);
+                flag = true;
+                break;
+            }
+
+        }
+        if (flag === false) {
+            alert("Sai mã học viên");
+        }
+        studentList(listCase);
+    }
+
+
+</script>
+</body>
+</html>
