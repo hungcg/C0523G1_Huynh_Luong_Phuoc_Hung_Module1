@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("nhập vào");
+    let newString= string.split(" ")
+    let box ="";
+    let result = [];
+    for (let i = 0; i <newString.length ; i++) {
+        newString[i]= newString[i].toUpperCase();
+        box = newString[i];
+        box = box.split('');
+        result.push(box[0]);
+        box = '';
+
+    }
+   document.write(result.join(" "));
+</script>
+</body>
+</html>

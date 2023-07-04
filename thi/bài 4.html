@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style></style>
+<input type="submit" value="Delete" onclick="deleted()">
+<div id="table"></div>
+<script>
+    class Tree {
+        constructor(code, name, type, time, quantity) {
+            this.code = code;
+            this.name = name;
+            this.type = type;
+            this.time = time;
+            this.quantity = quantity;
+        }
+    }
+
+    let tree1 = new Tree("T01", "Apple", "long", "1 year", "5");
+    let tree2 = new Tree("T02", "Coconut", "long", "2 year", "10");
+    let tree3 = new Tree("T03", "Orange", "short", "1 year", "10");
+    let listTree = [tree1, tree2, tree3];
+    let listTreeTable = [];
+    listTreeTable.push(listTree)
+
+
+    let table = `<table border="1", cellpadding="12" >
+
+    < thead >
+    <tr>
+    <th>Mã cây trồng</th>
+    <th>Tên cây trồng</th>
+    <th>Loại cây trồng</th>
+    <th>Thời gian thu hoạch</th>
+    <th>Số lượng cây</th>
+    </tr>
+    < /thead>`
+    for (let i = 0; i < listTree.length; i++) {
+        `<tbody>+= table
+          <tr>
+          <td>${listTree[i].code}</td>
+        <td>${listTree[i].name}</td>
+        <td>${listTree[i].type}</td>
+        <td>${listTree[i].time}</td>
+        <td>${listTree[i].quantity}</td>
+        </tr>
+        </tbody>+= </table>`
+    }
+    document.getElementById("table").innerHTML = table
+
+    // function deleted() {
+    //     for ()
+    //         }
+
+</script>
+
+</body>
+</html>

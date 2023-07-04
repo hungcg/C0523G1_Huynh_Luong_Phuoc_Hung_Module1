@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    debugger
+    let string="abc123123";
+    let newString = string.split('');
+    let newArray =[];
+    for (let i = 0; i < newString.length ; i++) {
+        if (newString[i] !== string) {
+            newArray.push(newString[i]);
+            newString.splice(i,1);
+            i--;
+
+        }
+
+    }
+document.write(newArray);
+</script>
+
+</body>
+</html>

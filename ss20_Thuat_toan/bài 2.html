@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stringA = "A";
+    let stringB = "BCd";
+    document.write("Input:" + "</br>");
+    document.write(stringA + "</br>");
+    document.write(stringB + "</br>");
+    let arrNew = [];
+    stringA = stringA.split('');
+    stringB = stringB.split('');
+    for (let i = 0; i < stringA.length; i++) {
+        for (let j = i; j < stringB.length; j++) {
+            if (stringA.includes(stringB[j])) {
+                arrNew.push(stringB[j]);
+                stringB.splice(j, 1);
+                j--;
+                break;
+            }
+        }
+        console.log(arrNew)
+    }
+    document.write("Output: " + arrNew.length);
+
+</script>
+
+</body>
+</html>

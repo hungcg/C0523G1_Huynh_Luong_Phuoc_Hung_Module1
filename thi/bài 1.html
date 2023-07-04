@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập vào cạnh a");
+    let b = +prompt("nhập vào cạnh b");
+    let c = +prompt("nhập vào cạnh c");
+
+    if (a < 0 || b < 0 || c < 0) {
+        alert("cạnh của tam giác phải lớn hơn 0");
+    }
+    if (a * a === (b * b) + (c * c)) {
+        alert(a + "," + b + "," + c + "," + "=> là 3 cạnh của tam giác vuông");
+    } else if (b * b === (a * a) + (c * c)) {
+        alert(a + "," + b + "," + c + "," + "=> là 3 cạnh của tam giác vuông");
+
+    } else if (c * c === (b * b) + (a * a)) {
+        alert(a + "," + b + "," + c + "," + "=> là 3 cạnh của tam giác vuông");
+    } else {
+        alert(a + "," + b + "," + c + "," + "=> không phải là 3 cạnh của tam giác vuông");
+    }
+
+</script>
+
+</body>
+</html>

@@ -6,11 +6,11 @@
 </head>
 <body>
 <script>
-    let text1 = "kqjqshdasdkac";
-    let text2 = "ioaszxcjddsaz";
+    let text1 = "aabcc";
+    let text2 = "adcaa";
     text1 = text1.split('');
     text2 = text2.split('');
-    arrnew = [];
+    let arrnew = [];
 
 
     for (let i = 0; i < text1.length; i++) {
@@ -18,17 +18,10 @@
             if (text1[i] === text2[j]) {
                 arrnew.push(text1[i]);
                 text2.splice(j, 1);
+                break;
             }
         }
     }
-    // for (let i = 0; i < arrnew.length ; i++) {
-    //     for (let j = i+1; j < arrnew.length ; j++) {
-    //         if (arrnew[i] === arrnew[j]){
-    //             arrnew.splice(j,1)
-    //         }
-    //     }
-    // }
-
     document.write("2 mảng có " + arrnew.length + " kí tự giống nhau và các  kí tự đó là:  " + arrnew);
 </script>
 </body>
